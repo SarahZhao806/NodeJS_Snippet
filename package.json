@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "nock": "^8.0.0"
+    "nock": "^8.0.0",
+    "rewire": "^2.5.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
