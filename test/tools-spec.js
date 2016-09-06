@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-
+var nock = require('nock');
 var tools = require('../lib/tools');
 
 describe('Tools', function() {
@@ -11,12 +11,18 @@ describe('Tools', function() {
     });
     
     describe('loadWiki', function() {
-        // set timeout as 5 seconds to run any asynchronous test under this test suite(the all test folder), default is 2 seconds
-        this.timeout(5000);
+        before(function() {
+            
+            nock('https://en.wikipedia.org')
+                .get("/wiki/Abraham_Lincoln")
+                .reply(200, "Mock Abraham Lincoln Page");
+        });
+        
         
         it("Load Abraham Lincoln's Wikipedia page", function(done) {
             tools.loadWiki({first: "Abraham", last: "Lincoln"}, function(html) {
-                expect(html).to.be.ok;
+//                expect(html).to.be.ok;
+                expect(html).to.equal("Mock Abraham Lincoln Page");
                 done();
             });
         });
