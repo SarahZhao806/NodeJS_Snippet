@@ -1,0 +1,34 @@
+{
+  "name": "ski-dictionary",
+  "version": "1.0.0",
+  "description": "A collection of skier terms and definitions",
+  "main": "dictionary.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "httpster": "^1.0.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahZhao806/NodeJS_Snippet.git"
+  },
+  "keywords": [
+    "ski",
+    "terms",
+    "dictionary"
+  ],
+  "author": "Sarah Zhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SarahZhao806/NodeJS_Snippet/issues"
+  },
+  "homepage": "https://github.com/SarahZhao806/NodeJS_Snippet#readme"
+}
